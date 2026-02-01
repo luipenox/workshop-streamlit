@@ -29,7 +29,20 @@ Workshop je koncipován jako "hands-on" projekt. Začneme analýzou dat, vytvoř
 *   **16:30 – 17:15 | Finalizace**: Design, cachování, ladění.
 *   **17:15 – 18:00 | Jdeme online**: GitHub, Streamlit Cloud, Showcase.
 
-## Prerekvizity
-*   Nainstalovaný Python (verze 3.8+)
-*   Editor kódu (VS Code nebo PyCharm)
-*   Účet na GitHubu (doporučeno)
+## Požadavky (Prerekvizity)
+
+### 🛠️ Technické vybavení
+Abychom mohli pracovat, budete potřebovat vlastní notebook s tímto vybavením:
+1.  **Python 3.8+**: Nainstalovaný lokálně (nezbytné pro odpolední část).
+2.  **Editor kódu (IDE)**: Doporučujeme **VS Code** nebo **PyCharm Community**.
+3.  **Git**: Pro verzování kódu.
+4.  **Online účty**:
+    *   **GitHub** (pro uložení kódu).
+    *   **Streamlit Cloud** (pro nasazení aplikace, přihlášení přes GitHub).
+    *   *(Volitelně)* Google účet pro práci v Google Colab (dopolední část).
+
+### 🧠 Nároky na znalosti
+Workshop je vhodný pro začátečníky i mírně pokročilé.
+*   **Nutné:** Základní znalost syntaxe Pythonu (proměnné, podmínky `if/else`, cykly `for`, definice funkcí `def`).
+*   **Není potřeba:** Znalost HTML/CSS/JavaScriptu, zkušenosti s webovým vývojem ani pokročilá statistika.
+*   **Vhodné pro:** Datové analytiky (přechod z Excelu), Python vývojáře (rychlé UI), manažery a studenty.
