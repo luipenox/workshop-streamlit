@@ -7,25 +7,27 @@ Workshop je koncipován jako "hands-on" projekt. Začneme analýzou dat, vytvoř
 
 ## Co se naučíte
 *   Základy efektivní analýzy dat s knihovnou Pandas.
-*   Tvorbu profesionálních grafů (Plotly).
+*   Tvorbu profesionálních grafů (Altair).
 *   Vývoj interaktivního dashboardu pomocí Streamlit.
 *   Základy verzování kódu (Git) a nasazení aplikace online.
 
-## Harmonogram
+## Harmonogram (9:00 – 18:00)
 
-### ☀️ Dopolední blok: Analýza a Vizualizace (3,5 h)
-*   **0:00 – 0:30 | Úvod a Setup**: Představení, VS Code, venv, stažení dat.
-*   **0:30 – 1:30 | Pandas: Jak zkrotit data**: Načtení, průzkum, čištění, filtrace.
-*   **1:30 – 1:45 | ☕ Přestávka**
-*   **1:45 – 2:45 | Vizualizace: Hledáme příběh**: Plotly Express (Bar, Line, Scatter).
-*   **2:45 – 3:30 | Příprava logiky aplikace**: Přechod k .py skriptům, funkce.
+### ☀️ Dopolední blok: Analýza a Vizualizace
+*   **09:00 – 09:45 | Úvod a Setup**: Představení, instalace, stažení dat.
+*   **09:45 – 10:00 | ☕ Pauza**
+*   **10:00 – 11:15 | Pandas: Jak zkrotit data**: Načtení, průzkum, čištění, filtrace.
+*   **11:15 – 11:30 | ☕ Pauza**
+*   **11:30 – 12:30 | Vizualizace: Hledáme příběh**: Altair (Bar, Line, Scatter).
+*   **12:30 – 13:30 | 🍽️ Oběd**
 
-### 🌙 Odpolední blok: Streamlit a Deployment (3,5 h)
-*   **0:00 – 0:45 | Ahoj, Streamlite!**: Struktura, grafy, layout (columns, tabs).
-*   **0:45 – 1:45 | Interaktivita**: Widgety (selectbox, slider), filtrování dat.
-*   **1:45 – 2:00 | ☕ Přestávka**
-*   **2:00 – 2:45 | Finalizace a Cachování**: `@st.cache_data`, sidebar, design.
-*   **2:45 – 3:30 | Jdeme online**: `requirements.txt`, GitHub, Streamlit Cloud.
+### 🌙 Odpolední blok: Streamlit a Deployment
+*   **13:30 – 14:45 | Ahoj, Streamlite!**: Struktura, grafy, layout.
+*   **14:45 – 15:00 | ☕ Pauza**
+*   **15:00 – 16:15 | Interaktivita**: Widgety, filtrování dat, session state.
+*   **16:15 – 16:30 | ☕ Pauza**
+*   **16:30 – 17:15 | Finalizace**: Design, cachování, ladění.
+*   **17:15 – 18:00 | Jdeme online**: GitHub, Streamlit Cloud, Showcase.
 
 ## Prerekvizity
 *   Nainstalovaný Python (verze 3.8+)

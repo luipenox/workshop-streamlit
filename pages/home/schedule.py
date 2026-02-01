@@ -32,7 +32,7 @@ def render_block(time, title, description, icon, type="theory"):
 
 # --- Úvodní info ---
 col1, col2, col3 = st.columns(3)
-col1.metric("Délka", "1 den", "7h čistého času")
+col1.metric("Délka", "1 den", "9:00 – 18:00")
 col2.metric("Úroveň", "Začátečník / Mírně pokr.", "Python")
 col3.metric("Výsledek", "Webová aplikace", "Streamlit Cloud")
 
@@ -43,43 +43,51 @@ st.header("☀️ Dopolední blok: Analýza a Vizualizace")
 st.caption("Cíl: Připravit data a grafy, které budeme později prezentovat.")
 
 render_block(
-    "0:00 – 0:30", 
+    "09:00 – 09:45", 
     "Úvod a Setup", 
-    "Představení, nastavení VS Code, virtuálního prostředí a stažení dat.", 
+    "Představení, nastavení prostředí a stažení dat.", 
     "👋", 
     "theory"
 )
 
 render_block(
-    "0:30 – 1:30", 
+    "09:45 – 10:00", 
+    "Coffee Break", 
+    "Ranní káva.", 
+    "☕", 
+    "break"
+)
+
+render_block(
+    "10:00 – 11:15", 
     "Pandas: Jak zkrotit data", 
-    "Načtení CSV, průzkum dat (.info, .describe), čištění a filtrace. Praktický úkol na analýzu.", 
+    "Načtení CSV, průzkum dat, čištění a filtrace. Praktický úkol.", 
     "🐼", 
     "practice"
 )
 
 render_block(
-    "1:30 – 1:45", 
+    "11:15 – 11:30", 
     "Coffee Break", 
-    "Doplnění kofeinu a protažení.", 
+    "Krátká pauza.", 
     "🥐", 
     "break"
 )
 
 render_block(
-    "1:45 – 2:45", 
+    "11:30 – 12:30", 
     "Vizualizace: Hledáme příběh", 
-    "Tvorba interaktivních grafů pomocí Altair (Bar, Line, Scatter).",
+    "Tvorba interaktivních grafů pomocí Altair (Bar, Line, Scatter).", 
     "📊", 
     "practice"
 )
 
 render_block(
-    "2:45 – 3:30", 
-    "Příprava logiky aplikace", 
-    "Přechod od Jupyter Notebooku k .py skriptům. Strukturování kódu do funkcí.", 
-    "⚙️", 
-    "theory"
+    "12:30 – 13:30", 
+    "Oběd", 
+    "Zasloužená pauza na jídlo.", 
+    "🍽️", 
+    "break"
 )
 
 st.markdown("---")
@@ -89,15 +97,23 @@ st.header("🌙 Odpolední blok: Streamlit a Deployment")
 st.caption("Cíl: Sestavit aplikaci, přidat interaktivitu a zveřejnit ji.")
 
 render_block(
-    "0:00 – 0:45", 
+    "13:30 – 14:45", 
     "Ahoj, Streamlite!", 
-    "Základní struktura aplikace, zobrazení textů a grafů, layout (sloupce, záložky).", 
+    "Základní struktura aplikace, zobrazení textů a grafů, layout.", 
     "🚀", 
     "practice"
 )
 
 render_block(
-    "0:45 – 1:45", 
+    "14:45 – 15:00", 
+    "Coffee Break", 
+    "Odpolední káva.", 
+    "🍩", 
+    "break"
+)
+
+render_block(
+    "15:00 – 16:15", 
     "Interaktivita", 
     "Práce s widgety (selectbox, slider) a jejich propojení s filtrováním dat.", 
     "🎛️", 
@@ -105,23 +121,23 @@ render_block(
 )
 
 render_block(
-    "1:45 – 2:00", 
+    "16:15 – 16:30", 
     "Coffee Break", 
-    "Krátká pauza před finále.", 
-    "🍩", 
+    "Poslední pauza.", 
+    "🥤", 
     "break"
 )
 
 render_block(
-    "2:00 – 2:45", 
+    "16:30 – 17:15", 
     "Finalizace a Cachování", 
-    "Optimalizace výkonu (@st.cache_data), postranní panel (sidebar) a ladění designu.", 
+    "Optimalizace výkonu, postranní panel a ladění designu.", 
     "🎨", 
     "practice"
 )
 
 render_block(
-    "2:45 – 3:30", 
+    "17:15 – 18:00",
     "Jdeme online", 
     "Vytvoření requirements.txt, push na GitHub a nasazení na Streamlit Cloud.", 
     "☁️", 
