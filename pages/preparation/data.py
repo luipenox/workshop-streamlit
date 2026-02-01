@@ -1,13 +1,56 @@
 import streamlit as st
+import pandas as pd
 
 st.title("💾 Výběr dat")
 st.markdown("""
-Nemáte vlastní data? Nevadí! Tady je pár tipů na zajímavé veřejné zdroje, které můžete použít pro svou analýzu.
+Abychom mohli tvořit dashboard, potřebujeme data. Na workshopu máte **3 možnosti**, jaká data použít.
+Vyberte si tu, která vám nejvíce vyhovuje.
 """)
 
-st.info("💡 **Tip:** Pro tento workshop jsme pro vás připravili cvičný dataset `data/prodeje.csv`, takže nemusíte nic stahovat, pokud nechcete.")
+st.divider()
+
+# --- MOŽNOST 1: VLASTNÍ DATA ---
+st.header("1. Vlastní data (Doporučeno)")
+st.info("🏆 **Nejlepší volba:** Pokud máte data z práce, školy nebo vlastního projektu, použijte je! Naučíte se nejvíc.")
+st.markdown("""
+**Požadavky na data:**
+*   Formát **CSV** nebo **Excel**.
+*   Ideálně "tabulková data" (řádky = záznamy, sloupce = vlastnosti).
+*   Neměla by být příliš citlivá (GDPR), pokud je plánujete nahrát na veřejný GitHub.
+""")
 
 st.divider()
+
+# --- MOŽNOST 2: CVIČNÝ DATASET ---
+st.header("2. Náš cvičný dataset")
+st.markdown("""
+Pokud nemáte vlastní data, připravili jsme pro vás fiktivní dataset **Prodeje e-shopu**.
+Obsahuje vše, co budeme potřebovat (datum, kategorie, čísla).
+""")
+
+# Načtení dat pro download button
+@st.cache_data
+def load_csv():
+    with open("data/prodeje.csv", "rb") as f:
+        return f.read()
+
+try:
+    csv_data = load_csv()
+    st.download_button(
+        label="📥 Stáhnout prodeje.csv",
+        data=csv_data,
+        file_name="prodeje.csv",
+        mime="text/csv",
+        type="primary"
+    )
+except FileNotFoundError:
+    st.error("Soubor data/prodeje.csv nebyl nalezen.")
+
+st.divider()
+
+# --- MOŽNOST 3: VEŘEJNÉ ZDROJE ---
+st.header("3. Veřejné databáze")
+st.markdown("Chcete analyzovat něco reálného, ale nemáte vlastní data? Zkuste tyto zdroje:")
 
 c1, c2, c3 = st.columns(3)
 
@@ -16,9 +59,9 @@ with c1:
     st.markdown("**[Kaggle Datasets](https://www.kaggle.com/datasets)**")
     st.caption("Obrovská databáze všeho možného. Nutná registrace.")
     st.markdown("""
-    *   [Titanic](https://www.kaggle.com/c/titanic/data) (Kdo přežil?)
-    *   [Netflix Movies](https://www.kaggle.com/shivamb/netflix-shows) (Co sledovat?)
-    *   [Airbnb NYC](https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data) (Ceny ubytování)
+    *   [Titanic](https://www.kaggle.com/c/titanic/data)
+    *   [Netflix Movies](https://www.kaggle.com/shivamb/netflix-shows)
+    *   [Airbnb NYC](https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data)
     """)
 
 with c2:
@@ -28,7 +71,7 @@ with c2:
     st.markdown("""
     *   [Dopravní nehody](https://data.gov.cz/datová-sada?iri=https%3A%2F%2Fdata.gov.cz%2Fzdroj%2Fdatové-sady%2F00007064%2F853503930)
     *   [Volby](https://www.volby.cz/opendata/opendata.htm)
-    *   [ČSÚ (Statistiky)](https://www.czso.cz/csu/czso/otevrena_data) (Mzdy, Inflace)
+    *   [ČSÚ (Statistiky)](https://www.czso.cz/csu/czso/otevrena_data)
     """)
 
 with c3:
